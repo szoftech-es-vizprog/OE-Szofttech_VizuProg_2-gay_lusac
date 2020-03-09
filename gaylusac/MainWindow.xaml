@@ -1,0 +1,41 @@
+﻿<Window x:Class="gaylusac.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:gaylusac"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="600" Width="800">
+    <Grid>
+        <Border Width="500" Height="500" VerticalAlignment="Center" HorizontalAlignment="Center" Background="Beige" BorderBrush="BlanchedAlmond" CornerRadius="5" BorderThickness="4">
+           
+            <StackPanel>
+                <TextBlock TextWrapping="Wrap" TextAlignment="Justify">
+                    Az állandó nyomású gáz térfogata egyenesen arányos a gáz (abszolút) hőmérsékletével, azaz a hányadosuk állandó.
+                </TextBlock>
+                <Border Background="Orange" CornerRadius="10">
+                    <Label Content="Képlettel: V/T = állandó" HorizontalAlignment="Center" FontWeight="Bold" />
+                </Border>
+                <Separator />
+                <Label Content="Hőmérséklet" FontWeight="Bold" />
+                <StackPanel Orientation="Horizontal">
+                    <Label Content="300 K" FontStyle="Italic" Margin="0 0 340 0" />
+                    <Label Content="1200 K" FontStyle="Italic" />
+                </StackPanel>
+                <Slider x:Name="KelvinSlider" Margin="10 0 10 10" Background="BlanchedAlmond" ValueChanged="KelvinSlider_ValueChanged" />
+                <StackPanel Orientation="Horizontal">
+                    <StackPanel>
+                        <TextBlock Text="Térfogat" FontWeight="Bold" />
+                        <TextBlock Name="textTerfogat" FontStyle="Italic" />
+                    </StackPanel>
+                    <StackPanel Margin="320 0 0 0">
+                        <TextBlock FontWeight="Bold">
+                            Nyomás
+                        </TextBlock>
+                        <TextBlock Text="200 kPa" FontStyle="Italic"/>
+                    </StackPanel>
+                </StackPanel>
+            </StackPanel> 
+        </Border>
+    </Grid>
+</Window>
